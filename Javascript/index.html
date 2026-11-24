@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            var age = 20;
+            age = 23;
+            console.log("Age :", age);
+
+            let course = "DSA";
+            course = "MERN"
+            console.log("Course : ", course);
+
+            const pan = "SDF2398XXR";
+            console.log("PAN", pan);
+
+            let admin = "admin";
+            let password = 123;
+
+            if (admin == "admin" && password == 123) console.log ("login successful");
+            else console.log  ("login unsuccessful");
+
+            function employee(name, college, company) {
+                console.log ("employee", name,"     Company", company,  "      College : ", college);
+            }
+            
+           
+            employee ("Raj", "SECE", "ZOHO");
+            employee ("Ram", "SECE", "Flipkart");
+            
+
+            let datal = function () {
+                return "Hello JS";
+            }
+            console.log (datal());
+            
+            let sum = (a, b) => {
+                return a + b;
+            }
+            console.log (sum (2, 4));
+            
+            function sece(callback) {
+                console.log ("Welcome to sece");
+                callback();
+            }
+
+            function stud () {
+                console.log ("I'm a Student");
+            }
+
+            sece(stud);
+
+
+            function open (notificaion) {
+                console.log ("Whatapp is opened");
+                notificaion();
+            }
+
+            function whatapp () {
+                console.log ("notification is sended");
+            }
+
+            open (whatapp);
+
+            let fetch_api = new Promise((resolve, reject) => {
+                let api = 1;
+                if (api) {
+                    resolve("food order successful");
+                }else {
+                    setTimeout(()=>{
+                        reject("food order failed");
+                    }, 5000)
+                }
+            })
+
+            fetch_api.then (data => console.log(data));
+
+            
+
+
+        </script>
+    </body>
+</html>

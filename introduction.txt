@@ -1,0 +1,38 @@
+What Happens When You Enter a URL?
+
+A simplified journey from typing a website address to seeing the page.
+
+* Browser checks caches and resolves the domain name to an IP address.
+* Brower establishes a connection (and TLS for HTTPS).
+* t sends an HTTP request, the server returns a response.
+* Browser processes HTML, CSS, JS & other resources to display the page.
+
+User -> Frontend -> Backend -> Database -> Response
+                 ->     Cache Memory    ->
+
+
+Memory : 
+* Heap Memory
+* Stack Memory
+* Cache Memory (Capacity 4MB)
+
+What is a URL?
+
+URL (Uniform Resource Locator) is the address used to locate a resource on the web.
+
+http://shop.example.com/products?category=shoes
+
+Schema/protocol :  http://
+Subdomain : shop
+Domain : example.com
+Path : /products
+Query string : ?category=shoes
+
+A URL may also include a port number or fragment (for example, #details).
+
+* live server
+* Auto Rename Tag
+* HTML CSS Support
+
+
+Server side and Client side scripting language
