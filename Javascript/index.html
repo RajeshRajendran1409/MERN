@@ -61,20 +61,47 @@
 
             open (whatapp);
 
-            let fetch_api = new Promise((resolve, reject) => {
-                let api = 1;
-                if (api) {
-                    resolve("food order successful");
-                }else {
-                    setTimeout(()=>{
-                        reject("food order failed");
-                    }, 5000)
+            // let fetch_api = new Promise((resolve, reject) => {
+            //     let api = 1;
+            //     if (api) {
+            //         resolve("food order successful");
+            //     }else {
+            //         setTimeout(()=>{
+            //             reject("food order failed");
+            //         }, 5000)
+            //     }
+            // })
+
+            // fetch_api.then (data => console.log(data));
+
+            // ====== object ======
+
+            let emp = [
+                {
+                    emp_id:101,
+                    emp_name:"Rajesh",
+                    salary:40000,
+                    skills:["Python", "Java", "C++"]
+                },
+                {
+                    emp_id:102,
+                    emp_name:"Kamalesh",
+                    salary:60000,
+                    company:{
+                        c1:"TCS",
+                        c2:"Accenture"
+                    }
                 }
-            })
+            ]
 
-            fetch_api.then (data => console.log(data));
+            for (let i = 0; i < 3; i++) {
+                let val = emp[0].skills[i];
+                if (val == "Java") {
+                    console.log ("true");
+                }
+            }
 
-            
+            console.log (emp[1].company.c2);
 
 
         </script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            // ====== object ======
+
+            let emp = [
+                {
+                    emp_id:101,
+                    emp_name:"Rajesh",
+                    salary:40000,
+                    skills:["Python", "Java", "C++"]
+                },
+                {
+                    emp_id:102,
+                    emp_name:"Kamalesh",
+                    salary:60000,
+                    company:{
+                        c1:"TCS",
+                        c2:"Accenture",
+                        cdata: {
+                            h : 100
+                        }
+                    }
+                }
+            ]
+
+            for (let i = 0; i < 3; i++) {
+                let val = emp[0].skills[i];
+                if (val == "Java") {
+                    console.log ("true");
+                }
+            }
+
+            console.log (emp[1].company.c2);
+            
+            // Object to String
+            let stringify_data = JSON.stringify(emp);
+            console.log (stringify_data);
+
+            // String to Object
+            let parse_data = JSON.parse(stringify_data);
+            console.log (parse_data);
+
+            // data copy
+            let copied_data = emp;
+            copied_data[0].salary = 80000;
+            console.log (copied_data);
+
+            //Shallow copy (spread operator)
+            let shallow_data = {...emp[1]};
+            shallow_data.salary = 90000;
+            console.log (shallow_data);
+
+            // shallow_data.company.c1 = "Google";
+            // console.log (shallow_data);
+
+            // DEep copy
+            let deep_copy = JSON.parse(JSON.stringify(emp));
+            deep_copy[1].company.c2 = "Google";
+            console.log (deep_copy);
+
+            // deep_copy[1].company.cdata.h = 200;
+            // console.log (deep_copy);
+
+            let deeep_copy = JSON.parse(JSON.stringify(emp));
+            deeep_copy[1].company.cdata.h = 200;
+            console.log (deeep_copy);
+
+        </script>
+    </body>
+</html>
